@@ -3,25 +3,18 @@
 <body>
     <script>
         // hey streamer! all of the config stuff is here
-        const CLIENT_ID = "ID"
-        const CLIENT_SECRET = "Secret"
-        const BROADCASTER_NAME = "Broadcaster"
+        const CLIENT_ID = "f00bk3zz6gyhva61zx1pmgnek9n59w"
+        const CLIENT_SECRET = "ongkuwv7p3yef2f8yh53qnmnqc45sg"
+        const BROADCASTER_NAME = "DonkeyShaunJr"
 
-        const TOP_OR_RANDOM = "top"
+        const TOP_OR_RANDOM = "random"
         const VOLUME_PERCENT = 50
-        const SHOW_CLIP_CREATORS = "false"
+        const SHOW_CLIP_CREATORS = "true"
         // TOP_OR_RANDOM can be either "top" to prioritise top clips or "random" to get random clips out of your top 1000
         // note that "random" clip mode requires a tiny bit of buffer time when the page is first loaded to collect a list of clips
 
         // below is just all the code that makes this work. once you've configured the settings above, you're good to go!
         // -ShaderWave
-
-
-
-
-
-
-
 
         // Utility functions
         async function authenticatedFetch(url, options) {
@@ -126,7 +119,6 @@
             player.src = getClipStreamURL(clip)
             player.play()
             if (SHOW_CLIP_CREATORS.toLowerCase() == "true") {
-                let date = new Date(clip.created_at)
                 let day = ('0' + date.getDate()).slice(-2);
                 let month = ('0' + (date.getMonth()+1)).slice(-2);
                 let year = date.getFullYear();
